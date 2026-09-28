@@ -1,0 +1,21 @@
+{
+  "name": "testtoken-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "chain": "hardhat node",
+    "deploy": "hardhat run --network localhost scripts/deploy.ts",
+    "deploy:sepolia": "hardhat run --network sepolia scripts/deploy.ts",
+    "clean": "node -e \"const { rmSync } = require('fs'); ['artifacts','cache','typechain','typechain-types','node_modules','package-lock.json'].forEach((p) => rmSync(p, { recursive: true, force: true }));\""
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
